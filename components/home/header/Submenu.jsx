@@ -1,5 +1,5 @@
 import React from 'react'
-import { submenuHome } from './data'
+import  submenuHome from '/public/data/home/submenu'
 // redux/toolikt
 import { useDispatch, useSelector } from 'react-redux'
 

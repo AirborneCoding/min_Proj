@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 // navbar data
-import { submenuHome } from '@/components/home/data'
+import submenuHome from 'public/data/home/submenu'
 
 const initialState = {
   isSubmenuOpen: false,
@@ -20,11 +20,6 @@ const navbarSlice = createSlice({
       state.subLinks.find((item) => {
         state.page2 = action.payload
       })
-      // state.subLinks.map((item)=> {
-      //   if(item.page === action.payload){
-      //     return state.page2 = action.payload;
-      //   }
-      // })
     },
     closeSubmenu: (state) => {
       state.isSubmenuOpen = false

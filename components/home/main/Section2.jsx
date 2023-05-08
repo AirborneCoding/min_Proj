@@ -1,12 +1,9 @@
 'use client'
 import { useState } from 'react'
-import { AiFillCaretDown } from '../../assets/icons/icons'
-import { submenuHome } from './data'
-import Submenu from './Submenu'
+import submenuHome from '/public/data/home/submenu'
+import Submenu from '../header/Submenu'
 import { useDispatch, useSelector } from 'react-redux'
-import {
-  openSubmenu,
-} from '@redux/slices/navbarSlice';
+import { openSubmenu, closeSubmenu } from '@redux/slices/navbarSlice'
 const Section2 = () => {
   const dispatch = useDispatch()
   const [showSubmenu, setShowSubmenu] = useState(false)
@@ -16,12 +13,16 @@ const Section2 = () => {
   }
 
   const handleMouseLeave = () => {
+    dispatch(closeSubmenu())
     setShowSubmenu(false)
   }
 
   return (
     <section>
-      <ul className='flex justify-around  items-center bg-myBlue'>
+      <ul
+        onMouseLeave={handleMouseLeave}
+        className='flex justify-around items-center bg-myBlue'
+      >
         {submenuHome.map((link) => {
           return (
             <li
@@ -30,7 +31,7 @@ const Section2 = () => {
               }}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
-              className='text-sm hidden lg:inline transition-all text-slate-100 hover:text-blue-700 cursor-pointer self-center'
+              className='text-sm hidden  py-5 lg:inline transition-all text-slate-100 hover:text-blue-700 cursor-pointer self-center'
               key={link.id}
             >
               {link.title}
@@ -50,7 +51,7 @@ const Section2 = () => {
         </li>
       </ul>
       {showSubmenu && (
-        <section className='s  space-x-16 py-8 px-4 shadow-lg flex items-center '>
+        <section className='s space-x-16 py-8 px-4 shadow-lg flex items-center '>
           <Submenu />
         </section>
       )}

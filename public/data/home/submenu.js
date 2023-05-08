@@ -1,4 +1,4 @@
-export const submenuHome = [
+ const submenuHome = [
   {
     id: 1,
     title: 'MINISTRY',
@@ -88,3 +88,4 @@ export const submenuHome = [
     ],
   },
 ]
+export default submenuHome

@@ -7,7 +7,7 @@ import { store } from '@/redux/store'
 import { Provider } from 'react-redux'
 
 import Navbar from '@components/navbar/Navbar.jsx'
-
+import Header from '@components/home/header/Header'
 export const metadata = {
   title: 'ministry of justice',
   description: 'gov website',
@@ -15,14 +15,18 @@ export const metadata = {
 
 const RootLayout = ({ children }) => {
   return (
-    <html lang='en'>
+    <html>
+      <head>
+        <meta charset='UTF-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+        <link rel='icon' type='image/svg+xml' href='/images/logo.png' />
+      </head>
       <body>
-        {/* <div className='main'>
-          <div className='gradient' />
-        </div> */}
         <main className=''>
           <Provider store={store}>
-            <Navbar />
+            {/* <Navbar /> */}
+            <Header />
             {children}
           </Provider>
         </main>

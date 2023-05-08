@@ -6,11 +6,11 @@ const Section1 = () => {
           <input type='text' placeholder='search...' className='form-input' />
         </div>
       </form>
-      <h3 className='w-74 sm:text-xl w-74 md:w-auto text-2xl'>
+      {/* <h3 className='w-74 sm:text-xl w-74 md:w-auto text-2xl'>
         {' '}
         the judiciary is at the service of the country
-      </h3>
-      {/* <h2 className='justice-quote'>القضاء في خدمة الوطن</h2> */}
+      </h3> */}
+      <h2 className='justice-quote self-center'>القضاء في خدمة الوطن</h2>
       <img src='/images/biglogo.svg' alt='' />
     </section>
   )
