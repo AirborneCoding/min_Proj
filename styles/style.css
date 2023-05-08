@@ -1,0 +1,162 @@
+.justice-quote {
+  font-family: arabswell !important;
+}
+.options {
+  background: transparent !important;
+}
+.section3 img {
+  height: 20px !important;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 23.4%, #10283e 100%);
+}
+
+.section4-head {
+  background: url('/public/images/justice.jpeg');
+  height: 500px;
+  /* object-fit: cover; */
+  background-size: cover;
+  background-position: center;
+}
+.s {
+  display: flex;
+}
+.s h2 {
+  /* flex: 1; */
+  width: 800px;
+}
+
+/*
+ ! section3
+ */
+
+.section3-container {
+  width: 100%;
+  cursor: pointer;
+}
+.section3-children {
+  position: relative;
+}
+.section3-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev {
+  right: 0;
+}
+.next {
+  left: 0;
+}
+
+.section3-children img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  /* opacity: 0.5; */
+}
+
+.section3-info {
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
+  text-align: end;
+  z-index: 1;
+  text-shadow: 1px 1px black;
+}
+
+.section3-children::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #eeeeee00 40%, #222 100%);
+  /* background: rgba(255, 255, 255, 0.7);  */
+  z-index: 1;
+}
+
+.section4-img {
+  height: 300px;
+  object-fit: cover;
+}
+/* section4-container */
+.section4-container {
+  color: black;
+}
+.section4-container {
+  background: url('/images/justice.webp');
+  position: relative;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  /* width: 100vw; */
+  z-index: 1;
+}
+.section4-container::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #10283e44;
+  z-index: -1;
+}
+
+.section4-content {
+  position: relative;
+  bottom: -28px;
+}
+.section4-content h4 {
+  margin-top: 10px;
+}
+@media screen and (min-width: 768px) {
+  .section4-content {
+    bottom: -80px;
+  }
+}
+
+.section4-2-imgs {
+  height: 110px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .er {
+    height: 1350px;
+  }
+}
+@media screen and (min-width: 768px) {
+    .er {
+    height: 860px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .er {
+    height: 500px;
+  }
+}
+
+.s{
+  position: absolute;
+  z-index: 9999;
+  cursor:pointer;
+  background-color: aliceblue;
+  width:100% ;
+}
+@media screen and (max-width:768px) {
+  .s{
+  display: none;
+}
+}
